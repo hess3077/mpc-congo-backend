@@ -1,0 +1,131 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "API's - Documentation",
+        "description": "Documentation des applications (MPC, TV Congo, ...)",
+        "version": "1.0"
+    },
+    "host": "mpc-congo-backend",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/loans": {
+            "get": {
+                "tags": [
+                    "Loans"
+                ],
+                "summary": "Retrieve list of loans..",
+                "description": "List of Loan Application",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page number",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "number items per page",
+                        "type": "integer",
+                        "maxLength": 2
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returned when successful",
+                        "schema": {
+                            "properties": {
+                                "data": {
+                                    "description": "list of loans",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Loans"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Expired API key"
+                    },
+                    "404": {
+                        "description": "Returned when loans application not exist"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/loans/{id}/remove": {
+            "delete": {
+                "tags": [
+                    "Loans"
+                ],
+                "summary": "Remove a Loan Application",
+                "description": "Remove a Loan Application",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id Loan Application",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Resource deleted successful"
+                    },
+                    "404": {
+                        "description": "Returned when loan application is not found"
+                    },
+                    "500": {
+                        "description": "Internal error, Deleting is not possible"
+                    },
+                    "401": {
+                        "description": "Expired API key"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Loans": {
+            "description": "list of loans",
+            "properties": {
+                "uuid": {
+                    "description": "loans controller.",
+                    "type": "string"
+                },
+                "externalRef": {
+                    "description": "loans controller.",
+                    "type": "string"
+                },
+                "createdAt": {
+                    "description": "loans controller.",
+                    "type": "string",
+                    "format": "date-format"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "type": "apiKey",
+            "description": "API key",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}

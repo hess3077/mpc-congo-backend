@@ -1,0 +1,6 @@
+[
+    {
+        "files": "**/*.php",
+        "command": "composer run-script swagger"
+    }
+]
