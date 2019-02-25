@@ -1,4 +1,4 @@
-SlimStarter------------3077
+SlimStarter
 ===========
 
 SlimStarter is a bootstrap application built with Slim Framework in MVC architecture,
