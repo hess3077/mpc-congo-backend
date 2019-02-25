@@ -1,4 +1,4 @@
 vendor
 dev
 public/swagger
-app/storage
+app/storage/cache
