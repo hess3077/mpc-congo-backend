@@ -10,7 +10,7 @@ $dir_frontend = !empty($isLocal) ? '&& cd mpc-congo' : '';
 
 switch ($env) {
     case 'backend':
-        `cd backend && git pull $uri/mpc-congo-backend/`; 
+        `git pull $uri/mpc-congo-backend/`; 
     break;
     default:
         `cd ../../ $dir_frontend && git pull $uri/mpc-congo/`;
