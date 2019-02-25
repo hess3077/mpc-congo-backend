@@ -20,7 +20,7 @@ Route::group(
                 App::stop();
             }else{
                 $redirect = Request::getResourceUri();
-                //Response::redirect(App::urlFor('login').'?redirect='.base64_encode($redirect));
+                Response::redirect(App::urlFor('login').'?redirect='.base64_encode($redirect));
             }
         }
     },
