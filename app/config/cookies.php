@@ -8,7 +8,6 @@ $config['cookies'] = array(
     'httponly'      => false,
     'name'          => 'slim_session',
     'secret'        => 'CHANGE_ME',
-    'cipher'        => 
-    ,
+    'cipher'        => MCRYPT_RIJNDAEL_256,
     'cipher_mode'   => MCRYPT_MODE_CBC
 );
