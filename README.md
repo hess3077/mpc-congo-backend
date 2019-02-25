@@ -1,4 +1,3 @@
-----Hess
 SlimStarter
 ===========
 
