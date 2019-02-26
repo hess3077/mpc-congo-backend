@@ -15,7 +15,7 @@ class BaseController extends \BaseController
 
         $adminMenu = Menu::create('admin_sidebar');
         $dashboard = $adminMenu->createItem('dashboard', array(
-            'label' => 'Dashboard',
+            'label' => 'Acceuil',
             'icon'  => 'dashboard',
             'url'   => 'admin'
         ));

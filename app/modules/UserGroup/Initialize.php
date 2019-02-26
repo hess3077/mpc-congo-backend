@@ -21,20 +21,20 @@ class Initialize extends \SlimStarter\Module\Initializer{
         $adminMenu = Menu::get('admin_sidebar');
 
         $userGroup = $adminMenu->createItem('usergroup', array(
-            'label' => 'User and Group',
+            'label' => 'Utilisateurs / Groupes',
             'icon'  => 'group',
             'url'   => '#'
         ));
         $userGroup->setAttribute('class', 'nav nav-second-level');
 
         $userMenu = $adminMenu->createItem('user', array(
-            'label' => 'User',
+            'label' => 'Utilisateurs',
             'icon'  => 'user',
             'url'   => 'admin/user'
         ));
 
         $groupMenu = $adminMenu->createItem('group', array(
-            'label' => 'Group',
+            'label' => 'Groupes',
             'icon'  => 'group',
             'url'   => 'admin/group'
         ));
