@@ -18,6 +18,10 @@
     height: 100%!important;
 }
 
+.alert {
+    margin: 0px 15px;
+}
+
 /** login customisation */
 .mpc-bg {
     height: 100vh;
@@ -79,6 +83,7 @@
     border: none;
     border-bottom: 1px solid #e4e8f0;
     font-weight: 500;
+    outline: none;
 }
 
 /** navbar customisation */

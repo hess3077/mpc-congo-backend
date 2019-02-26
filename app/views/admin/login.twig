@@ -19,9 +19,7 @@
             <div class="col-xl-4 col-lg-4 col-md-7 my-auto no-padding">
                 <div class="authentication-form mx-auto">
                     <div class="logo-centered text-center">
-                        <a href="db-default.html">
-                            <img src="{{assetUrl}}images/logo.png" alt="MPC-logo" class="navbar-logo">
-                        </a>
+                        <h1 class="gradient-text-01" style="font-size: 4rem; font-weight: bolder; color: #18a689;">mpc-congo</h1>
                     </div>
                 
                     {% if flash.message %}
@@ -33,7 +31,7 @@
                     
                     <div class="login-panel" style="margin-top:40px">
                     <div class="panel-body">
-                        <form role="form" method="post" action="{{baseUrl()}}/login">
+                        <form role="form" method="post" action="login">
                             <input type="hidden" name="redirect" value="{{ flash.redirect ? : redirect}}">
                             <fieldset>
                                 <div class="form-group material-input">
