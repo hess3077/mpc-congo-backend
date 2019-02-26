@@ -18,18 +18,19 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-7 my-auto no-padding">
                 <div class="authentication-form mx-auto">
-                    <div class="logo-centered">
+                    <div class="logo-centered text-center">
                         <a href="db-default.html">
-                            <img src="assets/img/logo.png" alt="logo">
+                            <img src="{{assetUrl}}images/logo.png" alt="MPC-logo" class="navbar-logo">
                         </a>
                     </div>
                 
                     {% if flash.message %}
                     <div class="alert alert-danger alert-dismissable" style="margin-top: 25px">
-                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
                     {{ flash.message }}
-                </div>
+                    </div>
                     {% endif %}
+                    
                     <div class="login-panel" style="margin-top:40px">
                     <div class="panel-body">
                         <form role="form" method="post" action="{{baseUrl()}}/login">
