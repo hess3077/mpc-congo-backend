@@ -47,4 +47,4 @@ foreach (Module::getModules() as $module) {
 }
 
 /** default routing */
-Route::get('/', 'Admin\AdminController:index');
+Route::get('/', 'Admin\AdminController:login');

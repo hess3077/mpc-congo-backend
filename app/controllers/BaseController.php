@@ -41,11 +41,10 @@ class BaseController
 
         /** base dir for asset file */
         $this->data['baseUrl']  = $this->baseUrl();
-        $this->data['assetUrl'] = $this->data['baseUrl'].'assets/';
+        $this->data['assetUrl'] = 'assets/';
 
         $this->loadBaseCss();
         $this->loadBaseJs();
-
     }
 
     /**
