@@ -60,6 +60,24 @@
     font-weight: 500;
 }
 
+.authentication-form h3 {
+    color: #2c304d;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.material-input input {
+    font-size: 1.3rem;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e4e8f0;
+    font-weight: 500;
+}
+
 /** navbar customisation */
 .navbar{
     min-height: 30px;
