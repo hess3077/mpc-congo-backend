@@ -13,6 +13,6 @@ switch ($env) {
         `git pull $uri/mpc-congo-backend/`; 
     break;
     default:
-        `cd ../../ $dir_frontend && git pull $uri/mpc-congo/`;
+        `cd ../../ $dir_frontend && git pull $uri/mpc-congo/ && mv dist/mpccongo/* web/`;
     break;
 }
