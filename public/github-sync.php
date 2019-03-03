@@ -6,7 +6,7 @@ $isLocal = isset($_GET['is_local']) ? true : false;
 $uri          = 'https://hess3077:T3R2GAvp@github.com/hess3077';
 $dir_frontend = !empty($isLocal) ? '&& cd mpc-congo' : '';
 
-$cmd_git_pull  = 'git checkout -- . && git pull';
+$cmd_git_pull  = '&& git pull';
 
 // On lance la synchronisation du serveur de PROD avec le serveur Github
 
