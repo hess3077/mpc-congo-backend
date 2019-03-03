@@ -15,6 +15,6 @@ switch ($env) {
         `$cmd_git_pull $uri/mpc-congo-backend/`; 
     break;
     default:
-        `cd ../../ $dir_frontend && $cmd_git_pull $uri/mpc-congo/ && cp dist/mpccongo/* web/`;
+        `cd ../../ $dir_frontend && $cmd_git_pull $uri/mpc-congo/ && cp -rf dist/mpccongo/* web/`;
     break;
 }
