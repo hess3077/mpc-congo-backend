@@ -14,4 +14,19 @@ $(function() {
 
         $('#page-wrapper').css('min-height', $(this).height() - $('.navbar').outerHeight());
     });
+
+    $('.focus-text').focus(function() {
+        console.log('focus --');
+        $(this).closest('div').addClass('focus-t');
+    });
+
+    $('.focus-text').blur(function() {
+        console.log('blur --');
+        if ($('.focus-text').length > 0 && $('.focus-text').val() != '')
+            $(this).closest('div').addClass('focus-t');
+        else {
+            $(this).closest('div').removeClass('focus-t');
+        }
+    });
+
 });

@@ -253,7 +253,24 @@ class BaseController
         $path       = trim($path, '/');
         $baseUrl    = Request::getUrl();
         $baseUrl    = trim($baseUrl, '/');
-        return $baseUrl.'/'.$path.( $path ? '/' : '' );
+        
+        /*
+        var_dump(
+            [
+                Request::getScheme(),
+                Request::getPort(),
+                $baseUrl,
+                $path
+            ]
+        );*/
+        
+        $baseUrl = $baseUrl.$path;
+        
+        if (Request::getScheme() == 'https' && Request::getPort() == 80) {
+            $baseUrl = str_replace(':80', '', $baseUrl);
+        }
+        
+        return $baseUrl;
     }
 
     /**
@@ -262,6 +279,9 @@ class BaseController
     protected function siteUrl($path, $includeIndex = false)
     {
         $path = trim($path, '/');
+        
+        //var_dump($this->data['baseUrl'].$path); die;
+        
         return $this->data['baseUrl'].$path;
     }
 }

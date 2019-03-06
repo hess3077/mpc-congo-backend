@@ -23,6 +23,11 @@
 }
 
 /** login customisation */
+.logo-centered h1 {
+    font-size: 4rem; 
+    font-weight: bolder; 
+    color: #18a689;
+}
 .mpc-bg {
     height: 100vh;
     width: 100%;
@@ -242,6 +247,50 @@ fieldset[disabled] .btn-success.active {
  background-color:  #18a689;
  border-color:  #18a689;
 }
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+/** Input text effect **/
+.focus-t span {
+    bottom: 36px !important;;
+    color: #98a8b4;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+    z-index:1;
+}
+.focus-t input:focus{
+	border-color: #98a8b4;	
+}
+.text-effect input {
+    border:none;
+    border-bottom:1px solid #e4e8f0 !important;
+    border-radius: 0;
+    position:absolute;
+	bottom:0;
+    box-shadow: none;
+	z-index:2;
+	background-color:transparent;
+}
+.form-control:focus {
+    border-bottom:2px solid #e4e8f0 !important;
+    box-shadow: none;
+    outline: 0 none;
+	transition:0.6s;
+}
+.text-effect {
+    position: relative;
+	height:70px;
+}
+.text-effect span {
+    bottom: 3px;
+    position: absolute;
+	z-index:1;
+    font-size: 1.3rem;
+}
+
+/** Responsive design **/
 
 @media all and (max-width: 990px) {
   .mpc-bg {
