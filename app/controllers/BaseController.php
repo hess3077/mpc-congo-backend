@@ -264,13 +264,11 @@ class BaseController
             ]
         );*/
         
-        $baseUrl = $baseUrl.$path;
-        
         if (Request::getScheme() == 'https' && Request::getPort() == 80) {
-            $baseUrl = str_replace(':80', '', $baseUrl);
+            $baseUrl = str_replace(':80', '/', $baseUrl);
         }
         
-        return $baseUrl;
+        return $baseUrl.$path;
     }
 
     /**
