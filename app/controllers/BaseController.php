@@ -254,16 +254,6 @@ class BaseController
         $baseUrl    = Request::getUrl();
         $baseUrl    = trim($baseUrl, '/');
         
-        /*
-        var_dump(
-            [
-                Request::getScheme(),
-                Request::getPort(),
-                $baseUrl,
-                $path
-            ]
-        );*/
-        
         if (Request::getScheme() == 'https' && Request::getPort() == 80) {
             $baseUrl = str_replace(':80', '/', $baseUrl);
         }
@@ -277,8 +267,6 @@ class BaseController
     protected function siteUrl($path, $includeIndex = false)
     {
         $path = trim($path, '/');
-        
-        //var_dump($this->data['baseUrl'].$path); die;
         
         return $this->data['baseUrl'].$path;
     }
